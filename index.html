@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Основы Рыночной Экономики</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #34495e;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background 0.3s;
+        }
+        nav a:hover {
+            background-color: #1abc9c;
+        }
+        .container {
+            display: flex;
+            max-width: 1200px;
+            margin: 20px auto;
+            gap: 20px;
+            padding: 0 10px;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            height: fit-content;
+        }
+        .sidebar h2 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            text-decoration: none;
+            color: #2c3e50;
+        }
+        .sidebar a:hover {
+            color: #1abc9c;
+        }
+        .content {
+            flex-grow: 1;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+        }
+        .content h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .search-box {
+            margin-bottom: 20px;
+        }
+        .search-box input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #34495e;
+            color: white;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Основы Рыночной Экономики</h1>
+    </header>
+
+    <nav>
+        <a href="#">Главная</a>
+        <a href="#">Разделы</a>
+        <a href="#">Об авторе</a>
+        <a href="#">Контакты</a>
+    </nav>
+
+    <div class="container">
+        <aside class="sidebar">
+            <div class="search-box">
+                <input type="text" placeholder="Поиск по сайту...">
+            </div>
+            <h2>Разделы</h2>
+            <ul>
+                <li><a href="#">Введение в экономику</a></li>
+                <li><a href="#">Рынок и рыночные механизмы</a></li>
+                <li><a href="#">Спрос и предложение</a></li>
+                <li><a href="#">Конкуренция и монополия</a></li>
+                <li><a href="#">Ценообразование</a></li>
+                <li><a href="#">Финансовые рынки</a></li>
+                <li><a href="#">Государственное регулирование</a></li>
+                <li><a href="#">Мировая экономика</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <h2>Добро пожаловать!</h2>
+            <p>Здесь будет размещён ваш текст о рыночной экономике. Можно вставлять статьи, таблицы, изображения и графики.</p>
+            <h3>Пример подзаголовка</h3>
+            <p>Тут можно писать объяснения, добавлять примеры, картинки, схемы и т.д.</p>
+        </main>
+    </div>
+
+    <footer>
+        © 2025 Основы Рыночной Экономики
+    </footer>
+</body>
+</html>
