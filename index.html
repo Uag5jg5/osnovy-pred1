@@ -64,6 +64,7 @@
         .sidebar a {
             text-decoration: none;
             color: #2c3e50;
+            cursor: pointer;
         }
         .sidebar a:hover {
             color: #1abc9c;
@@ -77,6 +78,12 @@
         .content h2 {
             color: #2c3e50;
             margin-top: 0;
+        }
+        .tab {
+            display: none;
+        }
+        .tab.active {
+            display: block;
         }
         .search-box {
             margin-bottom: 20px;
@@ -102,10 +109,10 @@
     </header>
 
     <nav>
-        <a href="#">Главная</a>
-        <a href="#">Разделы</a>
-        <a href="#">Об авторе</a>
-        <a href="#">Контакты</a>
+        <a onclick="showTab('home')">Главная</a>
+        <a onclick="showTab('sections')">Разделы</a>
+        <a onclick="showTab('author')">Об авторе</a>
+        <a onclick="showTab('contact')">Контакты</a>
     </nav>
 
     <div class="container">
@@ -115,27 +122,91 @@
             </div>
             <h2>Разделы</h2>
             <ul>
-                <li><a href="#">Введение в экономику</a></li>
-                <li><a href="#">Рынок и рыночные механизмы</a></li>
-                <li><a href="#">Спрос и предложение</a></li>
-                <li><a href="#">Конкуренция и монополия</a></li>
-                <li><a href="#">Ценообразование</a></li>
-                <li><a href="#">Финансовые рынки</a></li>
-                <li><a href="#">Государственное регулирование</a></li>
-                <li><a href="#">Мировая экономика</a></li>
+                <li><a onclick="showTab('intro')">Введение в экономику</a></li>
+                <li><a onclick="showTab('market')">Рынок и рыночные механизмы</a></li>
+                <li><a onclick="showTab('supply')">Спрос и предложение</a></li>
+                <li><a onclick="showTab('competition')">Конкуренция и монополия</a></li>
+                <li><a onclick="showTab('pricing')">Ценообразование</a></li>
+                <li><a onclick="showTab('finance')">Финансовые рынки</a></li>
+                <li><a onclick="showTab('gov')">Государственное регулирование</a></li>
+                <li><a onclick="showTab('world')">Мировая экономика</a></li>
             </ul>
         </aside>
 
         <main class="content">
-            <h2>Добро пожаловать!</h2>
-            <p>Здесь будет размещён ваш текст о рыночной экономике. Можно вставлять статьи, таблицы, изображения и графики.</p>
-            <h3>Пример подзаголовка</h3>
-            <p>Тут можно писать объяснения, добавлять примеры, картинки, схемы и т.д.</p>
+            <div id="home" class="tab active">
+                <h2>Добро пожаловать!</h2>
+                <p>Здесь будет размещён ваш текст о рыночной экономике. Можно вставлять статьи, таблицы, изображения и графики.</p>
+            </div>
+
+            <div id="sections" class="tab">
+                <h2>Разделы сайта</h2>
+                <p>Выберите нужный раздел слева, чтобы увидеть содержание.</p>
+            </div>
+
+            <div id="author" class="tab">
+                <h2>Об авторе</h2>
+                <p>Информация об авторе и целях сайта.</p>
+            </div>
+
+            <div id="contact" class="tab">
+                <h2>Контакты</h2>
+                <p>Здесь можно добавить форму обратной связи или email.</p>
+            </div>
+
+            <div id="intro" class="tab">
+                <h2>Введение в экономику</h2>
+                <p>Текст о введении в экономику будет вставлен здесь.</p>
+            </div>
+
+            <div id="market" class="tab">
+                <h2>Рынок и рыночные механизмы</h2>
+                <p>Описание рыночных механизмов.</p>
+            </div>
+
+            <div id="supply" class="tab">
+                <h2>Спрос и предложение</h2>
+                <p>Текст о законах спроса и предложения.</p>
+            </div>
+
+            <div id="competition" class="tab">
+                <h2>Конкуренция и монополия</h2>
+                <p>Описание конкуренции и монополии.</p>
+            </div>
+
+            <div id="pricing" class="tab">
+                <h2>Ценообразование</h2>
+                <p>Как формируются цены на рынке.</p>
+            </div>
+
+            <div id="finance" class="tab">
+                <h2>Финансовые рынки</h2>
+                <p>Информация о финансовых рынках и инструментах.</p>
+            </div>
+
+            <div id="gov" class="tab">
+                <h2>Государственное регулирование</h2>
+                <p>Роль государства в рыночной экономике.</p>
+            </div>
+
+            <div id="world" class="tab">
+                <h2>Мировая экономика</h2>
+                <p>Влияние глобальных процессов на рыночную экономику.</p>
+            </div>
         </main>
     </div>
 
     <footer>
         © 2025 Основы Рыночной Экономики
     </footer>
+
+    <script>
+        function showTab(id) {
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+            window.scrollTo(0,0);
+        }
+    </script>
 </body>
 </html>
